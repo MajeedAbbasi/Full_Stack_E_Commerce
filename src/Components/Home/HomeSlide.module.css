@@ -1,0 +1,44 @@
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animation1 {
+  animation: fadeInRight 0.4s ease-in-out;
+}
+.animation2 {
+  animation: fadeInRight 0.7s ease-in-out;
+}
+.animation3 {
+  animation: fadeInRight 0.8s ease-in-out;
+}
+
+.ProductsSlider .swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+  background: white;
+  border-radius: 50px;
+  color: black;
+  width: 5% !important;
+  height: 35px !important;
+  min-width: 35px;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
+}
+.ProductsSlider .swiper:hover .swiper-button-prev {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: fadeInRight 0.5s ease-in-out;
+}
+.ProductsSlider .swiper:hover .swiper-button-next {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: fadeInLeft 0.5s ease-out;
+}

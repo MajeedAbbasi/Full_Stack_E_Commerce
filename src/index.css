@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -10,6 +12,7 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  /* font-family: "Lato", serif; */
   font-optical-sizing: auto;
   background-color: #f5f0f0;
   overflow-x: hidden !important;
@@ -66,30 +69,188 @@ nav ul button:hover {
   display: block;
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: cover !important;
 }
-.swiper-button-prev,
-.swiper-button-next {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  border-radius: 100%;
-  width: 45px;
-  height: 45px;
-  min-width: 45px;
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.swiper:hover .swiper-button-prev {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: fadeInLeft 0.5s ease-in-out;
+}
+.swiper:hover .swiper-button-next {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: fadeInRight 0.5s ease-out;
+}
+
+.homeSwipper .swiper-button-prev {
+  display: none !important;
+  background: #ff5252;
+  border-radius: 10%;
+  color: #fff;
+  width: 5% !important;
+  height: 35px !important;
+  min-width: 35px;
   box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
 }
-.swiper-button-prev:after,
+.homeSwipper .swiper-button-next {
+  display: none !important;
+  background: #ff5252;
+  border-radius: 10%;
+  color: #fff !important;
+  width: 5% !important;
+  height: 35px !important;
+  min-width: 35px;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
+}
+.homeSwipper .swiper-button-prev:after,
 .swiper-button-next:after {
-  font-size: 22px !important;
+  font-size: 18px !important;
+  color: white !important;
+}
+.ProductsSlider .swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+  background: white;
+  border-radius: 50px;
+  color: black !important;
+  width: 35px !important;
+  height: 35px !important;
+  min-width: 35px;
+  box-shadow: 0 1px 3px #0000001f, 0 1px 2px #0000003d !important;
+}
+.ProductsSlider .swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 18px !important;
   color: black !important;
 }
-.swiper-button-prev:active,
-.swiper-button-next:active {
-  background: #dbdbdb !important;
+.homeSwipper .swiper-button-prev:after,
+.homeSwipper .swiper-button-next:after {
+  font-size: 18px !important;
+  color: white !important;
+}
+
+.swiper-button-prev {
+  margin-left: 3% !important;
+}
+.swiper-button-next {
+  margin-right: 3% !important;
 }
 
 ::-webkit-scrollbar {
   scroll-behavior: none;
+}
+.MuiTabs-indicator {
+  background-color: #ff5252 !important;
+}
+.MuiTab-textColorPrimary.Mui-selected {
+  color: #ff5252 !important;
+}
+.swiper-pagination-bullet-active {
+  background: #ff5252 !important;
+}
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.ProductItem:hover .indicate {
+  display: flex;
+  animation: fadeDown 0.5s ease-in-out;
+}
+
+@keyframes swing {
+  20% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  60% {
+    transform: rotate(5deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* .swing {
+  display: inline-block;
+  animation: swing 1s ease-in-out;
+  transform-origin: top center;
+} */
+
+.swing:hover {
+  animation: swing 1s ease-in-out;
+}
+/* .ClientsSection  */
+
+/* .blurr {
+} */
+
+@keyframes easeout {
+  0% {
+    height: 0px;
+    width: 0px;
+  }
+  100% {
+    height: 50px;
+    width: 60px;
+  }
+}
+.Blogs:hover .pic img {
+  filter: brightness(60%);
+}
+.Blogs:hover .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to the target element */
+.Blogs:hover .icons {
+  animation: zoomIn 1s ease-in-out forwards;
 }
