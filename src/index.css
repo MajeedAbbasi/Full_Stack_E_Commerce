@@ -249,8 +249,22 @@ nav ul button:hover {
     transform: scale(1);
   }
 }
+@keyframes up {
+  0% {
+    transform: translateY(40px);
+  }
 
-/* Apply animation to the target element */
+  100% {
+    transform: translateY(10px);
+  }
+}
+
 .Blogs:hover .icons {
-  animation: zoomIn 1s ease-in-out forwards;
+  animation: zoomIn 0.5s ease-in-out;
+}
+
+.DeliverySection:hover .icon {
+  color: #ff5252;
+  transform: translateY(-10px);
+  transition: all 1s ease-in-out;
 }

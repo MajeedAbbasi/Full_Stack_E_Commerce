@@ -16,6 +16,7 @@ import Banner from "../../Components/Home/Banner";
 import Industry from "../../Components/Home/Industry";
 import ClientsSection from "../../Components/Home/ClientsSection";
 import Blogs from "../../Components/Home/Blogs";
+import DeliverySection from "../../Components/Home/DeliverySection";
 const Home = () => {
   const [value, setValue] = React.useState(0);
 
@@ -141,6 +142,7 @@ const Home = () => {
         <Industry />
         <ClientsSection />
         <Blogs />
+        <DeliverySection />
       </section>
       <br />
       <br />

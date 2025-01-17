@@ -8,7 +8,7 @@ const Blogs = () => {
     <div>
       <div className=" ">
         <h1 className="text-[25px] ml-32 mt-10 font-[500]">From The Blogs</h1>
-        <div className="flex gap-10 ml-32">
+        <div className="flex gap-10 ml-32 mt-5">
           <div className="w-[350px] h-[430px]  mt-4 group Blogs ">
             <div className="w-[350px] h-[220px] group overflow-hidden pic relative z-0 rounded-lg">
               <div className="absolute z-10 top-[35%] right-[30%]">
@@ -88,7 +88,7 @@ const Blogs = () => {
                 </div>
               </div>
               <img
-                src="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/6/1105_813/b-blog-4.jpg"
+                src="https://demos.codezeel.com/prestashop/PRS21/PRS210502/img/psblog/b/lg-b-blog-3.jpg"
                 alt=""
                 className="transition-transform  duration-[2s] group-hover:scale-150 bg-red-500 !overflow-hidden relative "
               />

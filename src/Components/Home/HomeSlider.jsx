@@ -48,7 +48,7 @@ const HomeSlider = () => {
                   $59.00
                 </p>
               </div>
-              <button className="bg-red-500 text-white w-[150px] h-12 rounded-lg -mt-2 text-[17px] hover:bg-red-600">
+              <button className="bg-red-500 text-white w-[150px] h-12 rounded-lg -mt-2 text-[17px] hover:bg-red-600 animate__animated animate__fadeInUp delay-75">
                 Shop Now
               </button>
             </div>
@@ -77,7 +77,7 @@ const HomeSlider = () => {
                   $99.00
                 </p>
               </div>
-              <button className="bg-red-500 text-white w-[150px] h-12 rounded-lg -mt-2 text-[17px] hover:bg-red-600">
+              <button className="bg-red-500 text-white w-[150px] h-12 rounded-lg -mt-1 text-[17px] hover:bg-red-600 animate__animated animate__fadeInUp delay-75">
                 Shop Now
               </button>
             </div>
